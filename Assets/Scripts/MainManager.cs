@@ -39,7 +39,7 @@ public class MainManager : MonoBehaviour
                 brick.onDestroyed.AddListener(AddPoint);
             }
         }
-        bestScoreText.text = "Best Score : " + PlayerProfile.GetInstance().GetName() + " : " + PlayerProfile.GetInstance().GetBestScore();
+        bestScoreText.text = "Best Score : " + PlayerProfile.GetInstance().Name + " : " + PlayerProfile.GetInstance().GetBestScore();
     }
 
     private void Update()
@@ -80,6 +80,6 @@ public class MainManager : MonoBehaviour
         m_GameOver = true;
         GameOverText.SetActive(true);
         PlayerProfile.GetInstance().GameEnd(m_Points);
-        bestScoreText.text = "Best Score : " + PlayerProfile.GetInstance().GetName() + " : " + PlayerProfile.GetInstance().GetBestScore();
+        bestScoreText.text = "Best Score : " + PlayerProfile.GetInstance().Name + " : " + PlayerProfile.GetInstance().GetBestScore();
     }
 }

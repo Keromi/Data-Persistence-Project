@@ -52,18 +52,11 @@ public class PlayerProfile : MonoBehaviour
 
     }
 
-    [SerializeField]private TMP_InputField inputField;
+    
     private Profile profile;
     private static PlayerProfile Instance;
     int currentBestScore;
-    public void GameStart()
-    {
-        if(inputField.text != "")
-        {
-            profile.name = inputField.text;
-        }
-        
-    }
+    
 
     void Start()
     {
@@ -71,6 +64,7 @@ public class PlayerProfile : MonoBehaviour
        
         if(Instance != null)
         {
+            
             Destroy(gameObject);
             return;
         }
@@ -131,6 +125,7 @@ public class PlayerProfile : MonoBehaviour
             string toJson = JsonUtility.ToJson(values[i]);
             string fileName = GetSaveDataName(6 - i);
             File.WriteAllText(fileName, toJson);
+            Debug.Log(fileName);
             Debug.Log("Wrire SaveData");
 
         }
@@ -149,10 +144,8 @@ public class PlayerProfile : MonoBehaviour
     {
         return currentBestScore;
     }
-    public string GetName()
-    {
-        return profile.name;
-    }
+    public string Name { get { return profile.name; } set { profile.name = value; } }
+   
     public int GetScore()
     {
         return profile.score;

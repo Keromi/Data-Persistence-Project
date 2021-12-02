@@ -238,6 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bc14efee9a733941a8d8a19ae44db64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputField: {fileID: 2055422996}
 --- !u!1 &419262653
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,18 +324,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 368542952}
         m_TargetAssemblyTypeName: UIHandler, Assembly-CSharp
-        m_MethodName: SceneChange
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1790198878}
-        m_TargetAssemblyTypeName: PlayerProfile, Assembly-CSharp
         m_MethodName: GameStart
         m_Mode: 1
         m_Arguments:
@@ -1195,7 +1184,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7fb9b04678eaf45a4c0b9926faa329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputField: {fileID: 2055422996}
 --- !u!4 &1790198879
 Transform:
   m_ObjectHideFlags: 0
@@ -1316,7 +1304,7 @@ GameObject:
   - component: {fileID: 2055422997}
   - component: {fileID: 2055422996}
   m_Layer: 5
-  m_Name: InputField (TMP)
+  m_Name: NameInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
